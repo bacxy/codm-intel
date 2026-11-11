@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0e12">
+<title>CODM Intel — The Complete Call of Duty: Mobile Guide</title>
+<style>
+:root{--bg:#0b0e12;--panel:#121820;--panel2:#18212b;--line:#283442;--text:#edf3f8;--muted:#9baaba;--lime:#c7f36b;--orange:#ff9b54;--blue:#73c8ff;--radius:18px;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#253329 0,transparent 35%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:#0b0e12eF;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:950;letter-spacing:1.4px;font-size:18px}.brand span{color:var(--lime)}.navlinks{display:flex;gap:20px;color:var(--muted);font-size:13px;font-weight:700}.navlinks a:hover{color:var(--lime)}.menu{display:none;background:var(--panel2);color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.hero{padding:76px 0 52px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #c7f36b22;border-radius:50%;right:-100px;top:-150px;box-shadow:0 0 0 45px #c7f36b08,0 0 0 90px #c7f36b05;pointer-events:none}
+.eyebrow{color:var(--lime);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.99;letter-spacing:-3px;max-width:800px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{color:var(--muted);max-width:680px;font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:11px;background:var(--lime);color:#11170c;font-weight:900;border:1px solid var(--lime);cursor:pointer}.btn.secondary{background:transparent;color:var(--text);border-color:var(--line)}.btn:hover{transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}.stat{background:#121820cc;border:1px solid var(--line);border-radius:14px;padding:16px}.stat b{display:block;font-size:22px;color:var(--lime)}.stat small{color:var(--muted)}
+section{padding:42px 0;scroll-margin-top:82px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.section-head h2{font-size:clamp(27px,4vw,38px);line-height:1.1;margin:6px 0}.section-head p{color:var(--muted);max-width:520px;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(145deg,var(--panel),#10151b);border:1px solid var(--line);border-radius:var(--radius);padding:20px;min-width:0}.card h3{margin:8px 0 7px;font-size:19px}.card p,.card li{color:var(--muted);font-size:14px}.icon{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:#c7f36b18;color:var(--lime);font-size:19px}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:11px;color:var(--lime);font-weight:800;margin:3px 4px 3px 0}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.list{padding-left:18px}.list li{margin:8px 0}.callout{border-left:3px solid var(--lime);background:#c7f36b0d;padding:14px 16px;border-radius:0 12px 12px 0;color:#cbd5df;font-size:14px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.field{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:11px 13px;min-width:0}.field:focus{outline:2px solid #c7f36b66}.toolbar input{flex:1;min-width:190px}
+.weapon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.weapon{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:14px}.weapon-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.weapon h3{margin:0;font-size:17px}.weapon p{margin:7px 0;color:var(--muted);font-size:13px}.weapon .type{color:var(--lime);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{background:var(--panel);color:var(--muted);border:1px solid var(--line);padding:9px 13px;border-radius:10px;cursor:pointer;font-weight:800}.tab.active{background:var(--lime);color:#11170c;border-color:var(--lime)}
+.builder{display:grid;grid-template-columns:1fr 1fr;gap:16px}.builder label{display:block;color:var(--muted);font-size:12px;font-weight:800;margin:12px 0 5px}.builder select{width:100%}.output{background:#0d1217;border:1px dashed #60734a;border-radius:14px;padding:18px;min-height:180px}.output h3{margin-top:0;color:var(--lime)}
+.glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.term{padding:13px 15px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.term b{color:var(--lime)}.term span{display:block;color:var(--muted);font-size:13px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:9px 0}summary{font-weight:850;cursor:pointer}details p{color:var(--muted);font-size:14px;margin-bottom:2px}
+footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:13px}.footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.notice{font-size:12px;color:var(--muted)}.empty{color:var(--muted);padding:20px;text-align:center;border:1px dashed var(--line);border-radius:12px;grid-column:1/-1}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#0b0e12;padding:18px 22px;border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.grid,.weapon-grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}
+@media(max-width:580px){.wrap{width:min(100% - 26px,var(--max))}.hero{padding-top:54px}.hero h1{letter-spacing:-2px}.stats{grid-template-columns:repeat(2,1fr)}.grid,.weapon-grid,.builder,.glossary{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.nav{height:62px}.navlinks{top:62px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#top">CODM<span> INTEL</span></a>
+  <nav class="navlinks" id="navlinks"><a href="#basics">Start here</a><a href="#modes">Game modes</a><a href="#weapons">Weapons</a><a href="#loadout">Loadout lab</a><a href="#sensitivity">Sensitivity</a><a href="#skills">Improve</a><a href="#glossary">Glossary</a></nav>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">☰ Menu</button>
+</div></header>
+<main id="top">
+<div class="wrap hero">
+  <div class="eyebrow">Your field manual • Call of Duty: Mobile</div>
+  <h1>KNOW THE GAME.<br><em>WIN THE FIGHT.</em></h1>
+  <p>A practical CODM knowledge base covering Multiplayer, Battle Royale, weapons, classes, perks, scorestreaks, ranked strategy, settings and the language players use.</p>
+  <div class="actions"><a class="btn" href="#basics">Explore the guide ↓</a><a class="btn secondary" href="#loadout">Build a loadout</a></div>
+  <div class="stats">
+    <div class="stat"><b>MP</b><small>Fast objective combat</small></div><div class="stat"><b>BR</b><small>Survival and rotations</small></div><div class="stat"><b>Gunsmith</b><small>Weapon customization</small></div><div class="stat"><b>Ranked</b><small>Competitive progression</small></div>
+  </div>
+</div>
+
+<section id="basics"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">01 / Fundamentals</div><h2>What is CODM?</h2></div><p>Call of Duty: Mobile is a free-to-play mobile first-person shooter with several combat formats and a deep weapon customization system.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">🎯</div><h3>Core gameplay loop</h3><p>Choose a mode, select a weapon and operator setup, complete the objective, earn score and improve your performance. Winning is usually about positioning and decisions—not only aim.</p></article>
+    <article class="card"><div class="icon">🧰</div><h3>Loadouts</h3><p>A loadout combines a primary weapon, secondary weapon, operator skill, three perks, lethal and tactical equipment, and a set of scorestreaks in Multiplayer.</p></article>
+    <article class="card"><div class="icon">📈</div><h3>Progression</h3><p>Play matches and events to earn account XP, weapon XP, camos and other rewards. Ranked modes use competitive tiers and seasonal progression.</p></article>
+  </div>
+</div></section>
+
+<section id="modes"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">02 / Play styles</div><h2>Choose your battlefield</h2></div><p>Each mode rewards a different skill set. Learn the objective before choosing your route or weapon.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">⚡</div><h3>Multiplayer (MP)</h3><p>Short, intense matches on compact maps. Learn spawn logic, lanes, cover and objective timing.</p><span class="tag">Fast engagements</span><span class="tag">Team coordination</span></article>
+    <article class="card"><div class="icon">🪂</div><h3>Battle Royale (BR)</h3><p>Large-map survival. Loot, choose a safe rotation, manage armour and ammunition, and fight for position as the safe zone closes.</p><span class="tag">Rotations</span><span class="tag">Survival</span></article>
+    <article class="card"><div class="icon">🏆</div><h3>Ranked</h3><p>Competitive playlists where consistency matters. Play the objective, avoid unnecessary deaths and adapt to the lobby.</p><span class="tag">Discipline</span><span class="tag">Team play</span></article>
+    <article class="card"><div class="icon">💣</div><h3>Search & Destroy</h3><p>Attack or defend bomb sites. Each life matters, so use information, trade teammates and manage the clock.</p><span class="tag">One life per round</span></article>
+    <article class="card"><div class="icon">📍</div><h3>Hardpoint</h3><p>Capture the active zone and prepare for the next one. Rotate early when your team has control instead of chasing kills.</p><span class="tag">Objective control</span></article>
+    <article class="card"><div class="icon">🚩</div><h3>Domination</h3><p>Capture and hold objectives. A stable two-point setup is often more useful than spreading out to chase every flag.</p><span class="tag">Map control</span></article>
+  </div>
+</div></section>
+
+<section id="weapons"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">03 / Armoury</div><h2>Weapon classes</h2></div><p>Use this filter to explore common weapon roles. Exact weapon balance changes with updates, so test current stats in-game.</p></div>
+  <div class="toolbar"><input id="weaponSearch" class="field" type="search" placeholder="Search weapons or roles…"><select id="weaponType" class="field"><option value="all">All classes</option><option>Assault Rifle</option><option>SMG</option><option>LMG</option><option>Sniper Rifle</option><option>Shotgun</option><option>Marksman Rifle</option></select></div>
+  <div id="weaponGrid" class="weapon-grid"></div>
+  <p class="notice">Weapon recommendations are general role guidance, not a claim that one gun is always the current-season meta.</p>
+</div></section>
+
+<section id="loadout"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">04 / Loadout lab</div><h2>Build a practical setup</h2></div><p>Choose your mode, engagement range and play style to get a sensible starting point. Check the in-game Gunsmith for current attachment names and stats.</p></div>
+  <div class="builder">
+    <div class="card">
+      <label for="mode">Game mode</label><select id="mode" class="field"><option>Multiplayer Ranked</option><option>Multiplayer Respawn</option><option>Battle Royale</option></select>
+      <label for="range">Preferred engagement range</label><select id="range" class="field"><option value="close">Close range</option><option value="mid" selected>Mid range</option><option value="long">Long range</option></select>
+      <label for="style">Play style</label><select id="style" class="field"><option value="aggressive">Aggressive / entry fragger</option><option value="balanced" selected>Balanced</option><option value="support">Support / anchor</option><option value="sniper">Sniper / long range</option></select>
+      <label for="perk">Priority</label><select id="perk" class="field"><option value="mobility">Mobility and fast handling</option><option value="control" selected>Recoil control and accuracy</option><option value="survival">Survival and team support</option></select>
+      <div class="actions"><button class="btn" id="generateLoadout">Generate starting setup</button></div>
+    </div>
+    <div class="output" id="loadoutOutput"><h3>Your setup appears here</h3><p>Select your preferences and generate a starting loadout.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <div class="section-head"><div><div class="eyebrow">Gunsmith planner</div><h2>Weapon build priorities</h2></div><p>Build for the job you need the weapon to do, not simply for the most attachments with green stats.</p></div>
+    <div class="toolbar"><select id="buildWeapon" class="field"><option>Kilo 141</option><option>M13</option><option>DR-H</option><option>AK-47</option><option>QQ9</option><option>CBR4</option><option>PP19 Bizon</option><option>DL Q33</option><option>Locus</option><option>Holger 26</option></select><select id="buildMode" class="field"><option>MP Ranked</option><option>MP respawn</option><option>Battle Royale</option></select></div>
+    <div id="blueprintOutput" class="output"></div>
+  </div>
+</div></section>
+
+<section id="sensitivity"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">05 / Controls</div><h2>Sensitivity planner</h2></div><p>Sensitivity is personal. Use a baseline, test it in Training Mode and adjust one setting at a time.</p></div>
+  <div class="builder">
+    <div class="card">
+      <label for="sensStyle">Play style</label><select id="sensStyle" class="field"><option value="balanced">Balanced</option><option value="aggressive">Aggressive / fast movement</option><option value="br">Battle Royale tracking</option><option value="sniper">Sniper / precision</option></select>
+      <label for="sensLayout">Finger layout</label><select id="sensLayout" class="field"><option value="2">2 fingers</option><option value="3">3 fingers</option><option value="4">4 fingers</option></select>
+      <label for="gyro">Gyroscope</label><select id="gyro" class="field"><option value="off">Off</option><option value="ads">ADS only</option><option value="always">Always on</option></select>
+      <div class="actions"><button class="btn" id="sensBtn">Create practice baseline</button></div>
+    </div>
+    <div class="output" id="sensOutput"><h3>Practice baseline</h3><p>Choose your control preferences to see suggested starting ranges.</p></div>
+  </div>
+  <div class="callout" style="margin-top:16px">Do not copy a pro player's sensitivity blindly. Screen size, frame rate, finger layout, aim habits and gyroscope use all affect what feels controllable. These suggestions are broad practice ranges, not verified current pro settings.</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">06 / Improvement</div><h2>Win more through decisions</h2></div><p>Build repeatable habits that work across weapons and seasons.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">👁️</div><h3>Crosshair placement</h3><p>Keep your aim near the height where an enemy is likely to appear. Pre-aim common corners rather than reacting from the floor.</p></article>
+    <article class="card"><div class="icon">🧱</div><h3>Use cover</h3><p>Expose as little of your character as possible. After firing, reset behind cover instead of standing still in the same angle.</p></article>
+    <article class="card"><div class="icon">🧭</div><h3>Map awareness</h3><p>Use the minimap, teammate positions, sound cues and kill feed. Predict where enemies may rotate from instead of watching only one lane.</p></article>
+    <article class="card"><div class="icon">🎮</div><h3>Practise deliberately</h3><p>Spend a short session tracking moving targets, controlling recoil and practising turns. Pick one weakness to improve per session.</p></article>
+    <article class="card"><div class="icon">🤝</div><h3>Play the objective</h3><p>In Hardpoint and Domination, kills matter most when they create space or protect an objective. Rotate early and coordinate trades.</p></article>
+    <article class="card"><div class="icon">🔊</div><h3>Audio and information</h3><p>Use comfortable audio settings and learn common sound cues. Avoid relying on audio alone; combine it with the minimap and team information.</p></article>
+  </div>
+  <div class="two" style="margin-top:16px">
+    <div class="card"><h3>Multiplayer checklist</h3><ul class="list"><li>Know the objective and the next likely fight.</li><li>Pre-aim corners and avoid sprinting into every angle.</li><li>Reload behind cover when possible.</li><li>Use tactical equipment to create an advantage, not randomly.</li><li>Review deaths: positioning, timing, aim or information?</li></ul></div>
+    <div class="card"><h3>Battle Royale checklist</h3><ul class="list"><li>Choose a landing area based on your squad and risk tolerance.</li><li>Loot efficiently; do not stay exposed sorting inventory.</li><li>Rotate before the zone forces a predictable route.</li><li>Keep a close-range option and a weapon for distance.</li><li>Use terrain and cover; avoid unnecessary fights outside the zone.</li></ul></div>
+  </div>
+</div></section>
+
+<section id="glossary"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">07 / Player language</div><h2>CODM glossary</h2></div><p>Common terms used in guides, ranked lobbies and team communication.</p></div>
+  <div class="glossary">
+    <div class="term"><b>ADS</b><span>Aim Down Sights: aiming through the weapon's sights.</span></div>
+    <div class="term"><b>Hip-fire</b><span>Firing without aiming down sights.</span></div>
+    <div class="term"><b>Ttk</b><span>Time to kill: how long it takes to eliminate a target once shots begin landing.</span></div>
+    <div class="term"><b>Recoil</b><span>Weapon movement during firing; attachments and control technique can affect it.</span></div>
+    <div class="term"><b>BR</b><span>Battle Royale, the large-map survival mode.</span></div>
+    <div class="term"><b>MP</b><span>Multiplayer, including objective and team-based modes.</span></div>
+    <div class="term"><b>HUD</b><span>Heads-up display: on-screen buttons and information layout.</span></div>
+    <div class="term"><b>Gyro</b><span>Gyroscope aiming, which uses device movement to adjust aim.</span></div>
+    <div class="term"><b>Spawn trap</b><span>Controlling routes and pressure around an enemy spawn area.</span></div>
+    <div class="term"><b>Rotation</b><span>Moving to the next objective or safe position before it becomes urgent.</span></div>
+    <div class="term"><b>Trade</b><span>Eliminating an enemy who just eliminated a teammate, reducing the opponent's advantage.</span></div>
+    <div class="term"><b>Meta</b><span>The weapons, tactics or setups currently considered especially effective.</span></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">08 / Quick answers</div><h2>Frequently asked questions</h2></div><p>Useful reminders for building a setup and improving consistently.</p></div>
+  <details><summary>What is the best gun in CODM?</summary><p>There is no permanent best weapon. Balance patches, range, map, mode and player skill change what performs well. Choose a weapon you can control and check current in-game performance.</p></details>
+  <details><summary>Should I use two, three or four fingers?</summary><p>Start with the layout you can control. Three or four fingers can make it easier to aim, fire, jump and slide with less conflict between actions, but a new layout needs practice.</p></details>
+  <details><summary>Should I turn on gyroscope?</summary><p>It is optional. Some players use gyro for fine recoil corrections; others prefer touch-only aiming. Test it in Training Mode and keep it only if it improves consistency.</p></details>
+  <details><summary>How do I improve in Ranked?</summary><p>Learn objective timings and map routes, keep your crosshair ready, play near teammates when trading matters, and avoid repeat challenges that give the enemy easy kills.</p></details>
+  <details><summary>Are these exact current-season meta builds?</summary><p>No. This guide provides weapon roles and build priorities. Exact weapon balance changes with updates, so test current stats in-game.</p></details>
+</div></section>
+
+</main>
+<footer><div class="wrap footerrow"><div><b>CODM INTEL</b><br>Independent community guide for Call of Duty: Mobile.</div><div>Not affiliated with Activision or TiMi Studio Group.<br><span class="notice">Game names and trademarks belong to their respective owners. Verify current stats and availability in-game.</span></div></div></footer>
+
+<script>
+const weapons=[
+ {name:"Kilo 141",type:"Assault Rifle",role:"Flexible mid-range rifle",strength:"Steady all-round use",tip:"Balance recoil control with ADS handling for your map."},
+ {name:"M13",type:"Assault Rifle",role:"Sustained mid-range fire",strength:"Fast follow-up shots",tip:"Build for stable tracking and practise keeping shots on target."},
+ {name:"DR-H",type:"Assault Rifle",role:"High-damage controlled rifle",strength:"Rewards accurate shots",tip:"Prioritise controllability and aim for consistent upper-body hits."},
+ {name:"Krig 6",type:"Assault Rifle",role:"Flexible precision rifle",strength:"Comfortable mid-range role",tip:"Tune for your recoil pattern and target distance."},
+ {name:"AK-47",type:"Assault Rifle",role:"Hard-hitting rifle",strength:"Strong damage potential",tip:"Practise controlled bursts at distance instead of holding fire blindly."},
+ {name:"QQ9",type:"SMG",role:"Close-range entry weapon",strength:"Mobile close fights",tip:"Use cover and routes that keep engagements within your comfort range."},
+ {name:"CBR4",type:"SMG",role:"Close-to-mid pressure",strength:"Sustained SMG fire",tip:"Balance handling with enough control to track moving targets."},
+ {name:"Fennec",type:"SMG",role:"Very close-range pressure",strength:"Rapid close engagements",tip:"Control your bursts and avoid wasting ammunition at long range."},
+ {name:"PP19 Bizon",type:"SMG",role:"Sustained close-to-mid fights",strength:"Comfortable magazine capacity",tip:"Use movement and cover to manage engagements against rifles."},
+ {name:"Holger 26",type:"LMG",role:"Lane control and support",strength:"Sustained fire",tip:"Choose a position with cover and avoid getting caught moving in the open."},
+ {name:"RPD",type:"LMG",role:"Defensive lane pressure",strength:"Sustained area control",tip:"Hold useful angles and reposition when enemies know your location."},
+ {name:"DL Q33",type:"Sniper Rifle",role:"Precision long-range picks",strength:"High-impact accurate shots",tip:"Pre-aim common angles and use a close-range backup plan."},
+ {name:"Locus",type:"Sniper Rifle",role:"Mobile precision play",strength:"Quick repositioning potential",tip:"Practise centering and consistent timing before chasing fast shots."},
+ {name:"HDR",type:"Sniper Rifle",role:"Long-range precision",strength:"Range-focused role",tip:"Choose sightlines carefully and reposition after revealing your location."},
+ {name:"KRM-262",type:"Shotgun",role:"Close-quarters fights",strength:"Dangerous at close range",tip:"Use tight routes and avoid taking open mid-range fights."},
+ {name:"SKS",type:"Marksman Rifle",role:"Semi-automatic precision",strength:"Rewards accurate follow-up shots",tip:"Practise a steady firing rhythm and track targets deliberately."}
+];
+const weaponGrid=document.getElementById('weaponGrid');
+function renderWeapons(){
+ const q=document.getElementById('weaponSearch').value.toLowerCase();
+ const type=document.getElementById('weaponType').value;
+ const filtered=weapons.filter(w=>(type==='all'||w.type===type)&&(w.name+' '+w.type+' '+w.role+' '+w.tip).toLowerCase().includes(q));
+ weaponGrid.innerHTML=filtered.length?filtered.map(w=>`<article class="weapon"><div class="weapon-top"><h3>${w.name}</h3><span class="type">${w.type}</span></div><p><b>${w.role}</b></p><p>${w.strength}</p><p>${w.tip}</p></article>`).join(''):'<div class="empty">No matching weapon. Try another search or class.</div>';
+}
+document.getElementById('weaponSearch').addEventListener('input',renderWeapons);
+document.getElementById('weaponType').addEventListener('change',renderWeapons);
+renderWeapons();
+
+document.getElementById('generateLoadout').addEventListener('click',()=>{
+ const mode=document.getElementById('mode').value,range=document.getElementById('range').value,style=document.getElementById('style').value,perk=document.getElementById('perk').value;
+ const br=mode==='Battle Royale';
+ const distance=range==='close'?'Close fights: keep routes tight and use cover.':range==='long'?'Long fights: favour stable aim, cover and patient positioning.':'Mid-range fights: balance mobility with recoil control.';
+ const perks=perk==='mobility'?'Prioritise perks that support movement and fast engagements.':perk==='survival'?'Prioritise defensive or information-focused perks that suit your role.':'Prioritise perks that support consistent gunfights and control.';
+ const extra=style==='sniper'?'Take deliberate angles, keep a close-range backup and relocate after shots.':style==='aggressive'?'Enter fights with cover, use tactical equipment to clear angles and avoid sprinting blindly into sightlines.':style==='support'?'Hold useful lanes, cover teammate rotations and protect the objective rather than chasing every fight.':'Adapt your pace to the objective and teammate positions.';
+ const advice=br?'BR reminder: use a stable ranged weapon with a close-range option, rotate before the zone closes and avoid fights that leave you exposed.':'MP reminder: use a weapon suited to the map, choose scorestreaks you can earn reliably, and equip tactical/lethal items that support the objective.';
+ const setup=br?{primary:range==="long"?"Kilo 141 / AK-47 style rifle":"M13 / Kilo 141 style rifle",secondary:range==="close"?"QQ9 / close-range SMG":"Shotgun or SMG backup",perks:"Choose BR class and passive benefits around squad needs"}:{primary:range==="close"?"QQ9 / CBR4 style SMG":range==="long"?"DR-H / Kilo 141 style rifle":"Kilo 141 / M13 style rifle",secondary:"Pistol or launcher based on team needs",perks:perks};
+ document.getElementById('loadoutOutput').innerHTML=`<h3>Your ${mode} setup</h3><p><b>Primary idea:</b> ${setup.primary}</p><p><b>Secondary idea:</b> ${setup.secondary}</p><p><b>Perk direction:</b> ${setup.perks}</p><p><b>Range plan:</b> ${distance}</p><p>${advice}</p><div class="callout">${extra}</div><p class="notice">Use this as a starting point. Confirm current weapon balance and available equipment in-game.</p>`;
+});
+
+const sensitivityPresets={
+ balanced:{camera:"Standard 90–115",ads:"ADS 85–105",tactical:"Tactical scope 70–90",sniper:"Sniper scope 45–65",gyro:"If enabled, start low-to-medium and increase gradually."},
+ aggressive:{camera:"Standard 105–130",ads:"ADS 95–120",tactical:"Tactical scope 80–100",sniper:"Sniper scope 50–70",gyro:"Use small gyro corrections if comfortable; do not raise every value at once."},
+ br:{camera:"Standard 90–115",ads:"ADS 80–105",tactical:"Tactical scope 65–90",sniper:"Sniper scope 40–60",gyro:"For BR tracking, test gyro in Training Mode and tune for stable recoil control."},
+ sniper:{camera:"Standard 75–100",ads:"ADS 65–90",tactical:"Tactical scope 55–75",sniper:"Sniper scope 35–55",gyro:"Low gyro can help fine corrections, but only keep it if it improves consistency."}
+};
+document.getElementById('sensBtn').addEventListener('click',()=>{
+ const style=document.getElementById('sensStyle').value,layout=document.getElementById('sensLayout').value,gyro=document.getElementById('gyro').value,p=sensitivityPresets[style];
+ const layoutTip=layout==="2"?"Two-finger HUD: keep values moderate so you can aim and fire without losing control.":layout==="3"?"Three-finger HUD: a dedicated fire finger may let you aim while firing; practise before ranked.":"Four-finger HUD: separate actions where comfortable, then tune sensitivity around your thumb movement.";
+ const gyroTip=gyro==="off"?"Gyroscope: off — rely on thumb movement and tune ADS separately.":gyro==="ads"?"Gyroscope: ADS only — use it for fine corrections while aiming.":"Gyroscope: always on — practise small wrist movements and reduce values if your aim shakes.";
+ document.getElementById('sensOutput').innerHTML=`<h3>Practice baseline</h3><p><b>Camera / Standard:</b> ${p.camera}</p><p><b>Firing / ADS:</b> ${p.ads}</p><p><b>Tactical scope:</b> ${p.tactical}</p><p><b>Sniper scope:</b> ${p.sniper}</p><p>${layoutTip}</p><p>${gyroTip}</p><div class="callout">Test: track a moving target, perform a 180° turn, then control a full magazine. If you overshoot, lower the relevant value slightly; if you cannot turn or track fast enough, raise it slightly.</div><p class="notice">These are broad practice ranges, not verified current pro settings or guaranteed optimal values.</p>`;
+});
+const blueprints={
+ "Kilo 141":{
+  "MP Ranked":["Prioritise ADS speed without making recoil uncomfortable.","Choose a muzzle/barrel combination that suits your recoil and range needs.","Use a suitable stock or rear grip for handling; choose ammunition based on your accuracy and reload habits.","Suggested role: flexible mid-range slayer or objective support."],
+  "MP respawn":["Bias toward ADS speed and movement for repeated close-to-mid fights.","Keep recoil manageable; avoid stacking too many slow-handling attachments.","Use a magazine size that suits multi-enemy fights.","Suggested role: flexible respawn rifle."],
+  "Battle Royale":["Bias toward recoil stability, range and bullet spread accuracy.","Use an optic only if it genuinely helps your target visibility.","Choose a larger magazine if available and comfortable.","Suggested role: mid-to-long-range primary."]
+ },
+ "M13":{"MP Ranked":["Balance ADS speed with recoil control.","Prioritise comfortable tracking over a maximum-speed build.","Use a magazine option that fits your reload rhythm.","Suggested role: accurate sustained fire."],"MP respawn":["Prioritise handling and manageable recoil.","Keep the weapon fast enough for quick challenges.","Suggested role: mobile mid-range pressure."],"Battle Royale":["Prioritise range, recoil stability and a practical magazine.","Avoid attachments that make tracking distant targets difficult.","Suggested role: sustained mid-range rifle."]},
+ "DR-H":{"MP Ranked":["Prioritise accuracy and recoil control for deliberate shots.","Keep ADS handling comfortable for the map.","Suggested role: high-damage accurate rifle."],"MP respawn":["Use a balanced handling setup; do not overbuild for range on tiny maps.","Practise burst rhythm and upper-body aim.","Suggested role: controlled slayer."],"Battle Royale":["Prioritise stability and range over extreme sprint-to-fire speed.","Use a reliable close-range backup.","Suggested role: deliberate mid-range engagements."]},
+ "AK-47":{"MP Ranked":["Prioritise recoil control and accuracy.","Choose handling attachments only if you can still control sustained fire.","Suggested role: accurate, controlled bursts."],"MP respawn":["Balance handling with recoil; practise shorter bursts.","Suggested role: aggressive but controlled rifle."],"Battle Royale":["Bias toward range, stability and magazine capacity.","Practise recoil control at the distances you expect to fight.","Suggested role: mid-to-long-range damage."]},
+ "QQ9":{"MP Ranked":["Prioritise ADS speed and mobility for close-range fights.","Keep enough recoil control for short mid-range bursts.","Suggested role: entry fragger."],"MP respawn":["Bias toward handling and movement.","Use routes and cover that keep fights close.","Suggested role: fast close-range pressure."],"Battle Royale":["Use only if you are comfortable taking close fights; pair with a stable ranged weapon.","Prioritise controllability and a useful magazine.","Suggested role: close-range backup."]},
+ "CBR4":{"MP Ranked":["Balance ADS speed with recoil and range.","Choose a magazine size that suits your engagement pattern.","Suggested role: flexible SMG."],"MP respawn":["Prioritise quick handling and movement.","Keep the build controllable when tracking moving targets.","Suggested role: mobile objective player."],"Battle Royale":["If using it as a close-range weapon, pair with a reliable ranged primary.","Prioritise recoil and magazine comfort.","Suggested role: close-range backup."]},
+ "PP19 Bizon":{"MP Ranked":["Use a balanced handling and recoil setup.","The forgiving magazine can support objective pressure; avoid unnecessary handling penalties.","Suggested role: sustained close-to-mid pressure."],"MP respawn":["Prioritise mobility and ADS comfort.","Use cover to challenge one lane at a time.","Suggested role: objective pressure."],"Battle Royale":["Pair with a longer-range rifle or sniper.","Prioritise controllability and magazine capacity.","Suggested role: close-range backup."]},
+ "DL Q33":{"MP Ranked":["Prioritise ADS handling if you play aggressively, or stability for held angles.","Use a secondary that covers close-range threats.","Suggested role: precision picks."],"MP respawn":["Build for a balance between aim speed and repeatable accuracy.","Practise centering before aiming in.","Suggested role: mobile sniper."],"Battle Royale":["Choose stability, range and an optic you can use consistently.","Avoid exposing your position for repeated shots.","Suggested role: long-range pick weapon."]},
+ "Locus":{"MP Ranked":["Prioritise comfortable ADS handling and reliable accuracy.","Tune for your reaction speed rather than copying another player's setup.","Suggested role: aggressive precision."],"MP respawn":["Use a handling setup you can control; practise quick-scoping timing.","Suggested role: mobile sniper."],"Battle Royale":["Choose stability and useful sightlines over unnecessary handling trade-offs.","Suggested role: long-range precision."]},
+ "Holger 26":{"MP Ranked":["Prioritise recoil control and useful lane range.","Choose handling improvements if the map requires frequent repositioning.","Suggested role: lane anchor."],"MP respawn":["Balance handling and recoil; avoid challenging fast SMGs in tight rooms.","Suggested role: objective support."],"Battle Royale":["Prioritise range, stability and ammunition capacity.","Use cover and reposition after drawing attention.","Suggested role: sustained ranged pressure."]}
+};
+function renderBlueprint(){
+ const w=document.getElementById('buildWeapon').value,m=document.getElementById('buildMode').value;
+ const items=(blueprints[w]&&blueprints[w][m])||["Choose attachments that support your preferred range.","Balance recoil control, accuracy, ADS speed and magazine needs.","Test the build against moving targets and at different distances.","Suggested role: flexible starting point."];
+ document.getElementById('blueprintOutput').innerHTML=`<h3>${w} · ${m}</h3><ol class="list">${items.map(x=>`<li>${x}</li>`).join('')}</ol><div class="callout">Attachment names and exact “best builds” can change after balance updates. Open Gunsmith in CODM and match these priorities to the attachments currently available for this weapon.</div>`;
+}
+document.getElementById('buildWeapon').addEventListener('change',renderBlueprint);document.getElementById('buildMode').addEventListener('change',renderBlueprint);renderBlueprint();
+
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body></html>
